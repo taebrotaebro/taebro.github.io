@@ -1,0 +1,90 @@
+<!-- portfolio.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about</title>
+    <!-- สามารถเชื่อมต่อ CSS และอื่นๆ ตามที่คุณต้องการได้ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Ga+Maamli&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="about.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Ga+Maamli&family=Mitr:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="#">CHAKHRIT LUENET</a></div>
+
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            
+
+        </div>
+
+        <div class="dropdown_menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+
+        </div>
+
+    </header>
+    <main>
+            <div class="about-content">
+                <img class="imgg" src="https://scontent.fnak2-1.fna.fbcdn.net/v/t1.6435-9/177042565_159766892720091_4728253953380281720_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=zhMrZBZlJ2YQ7kNvgHHxQOn&_nc_ht=scontent.fnak2-1.fna&gid=AJ7LSgkAbLupBnDpzwMfjMK&oh=00_AYDcR0pIlpGApivhWSrohnQoC4BLM631IjwKav5pVRP5GA&oe=66CC74FF" alt="">
+                <h2>About Me</h2>
+                <p>สวัสดีครับ ชื่อ ชาคริต ลือเนตร ชื่อเล่น หนึ่ง ครับ สาขาเทคโนโลยีสารสนเทศและการสื่อสาร แขนงเทคโนโลยีเกมและการ​ผลิตดิจิทัลคอนเทนท์<br>
+                มีประสบการณ์ในด้านสายงาน Production มี​มนุษยสัมพันธ์ที่ดี พร้อมที่จะเรียนรู้อย่างต่อเนื่องและมุ่งมั่นที่จะพัฒนา​ตัวเองให้ดียิ่งขึ้นทุกวัน</p>
+                <hr>
+                <h2>WORK EXPERIENCE</h2>
+                <h4>Samerrai Channel</h4>
+                <p>• ตัดต่อคลิปของช่อง Samerrai<br>
+                    • ออกแบบและทำหน้าปกคลิปของช่อง Samerrai<br>
+                    • ออกแบบทำหน้าปก Youtube ของช่อง Samerrai<br>
+                    • ออกแบบโลโก้ของช่อง</p>
+
+                <h4>Why UBU</h4>
+                <p>• ตัดต่อคลิปหนังสั้นเรื่อง Why UBU</p>
+                <h4>Remix : รักแล้วไปไหน (งานวิชา Production)</h4>
+                    • ออกแบบ Story MV เพลง Cover รักแล้วไปไหน<br>
+                    • ตัดต่อคลิป MV ทั้งหมด</p>
+                <h4>Deezer1</h4>
+                    • ออกแบบและทำหน้าปกคลิปของช่อง Deezer1<br>
+                    • ตัดต่อคลิปทั้งหมดของช่อง</p>
+  
+            </div>
+        
+    </main>
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+
+        toggleBtn.onclick = function (){
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+        }
+    </script>
+    <!-- สามารถเชื่อมต่อสคริปต์หรือไลบรารีอื่นๆ ตามที่คุณต้องการได้ -->
+
+</body>
+</html>

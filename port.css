@@ -1,0 +1,623 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Mitr", sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgb(143, 143, 143);
+    background-image: url(https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1517&q=80);
+    background-size: cover;
+    background-position: center;
+}
+
+li{
+    
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: azure;
+    font-size: 1.5rem;
+}
+
+a:hover{
+    color: #ffae19;
+}
+
+header{
+    
+    position: sticky; /* ทำให้ header ติดอยู่ที่ด้านบน */
+    top: 0; /* ระบุระยะทางที่ header จะอยู่ห่างจากด้านบน */
+    z-index: 1000; /* ตั้งค่า z-index เพื่อให้ header อยู่ด้านบนสุด */
+    padding: 0 2rem;
+    width: 100%;
+
+}
+
+.navbar{
+    
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a{
+    
+    font-size: 1.8rem;
+    font-weight: bolder;
+}
+
+.navbar .links{
+    font-weight:bolder;
+    display:  flex;
+    gap: 2rem;
+}
+
+.navbar .toggle_btn{
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.dropdown_menu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgb(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open{
+    height: 240px;
+}
+
+.dropdown_menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section#hero{
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+#hero h1{
+    font-family: "Anton SC", sans-serif;
+    opacity: 70%;
+    letter-spacing: 15px;
+    font-style: normal;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+
+.portfo .skill {
+    font-family: "Anton SC", sans-serif;
+    letter-spacing: 5px;
+    font-style: normal;
+    font-size: 3rem;
+    height: calc(10vh - 60px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 50px;
+}
+
+
+
+.portfo .pre {
+
+    width: 100%;
+    max-width: 450px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* จัดตำแหน่งของ logo ที่สมบูรณ์ */  
+    margin: 0 auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.portfo .pre:hover {
+    filter: brightness(170%); /* เพิ่มสีสว่างขึ้นเมื่อมีการโฮเวอร์ */
+    transition: filter 0.3s ease; /* เพิ่ม transition เพื่อทำให้การเปลี่ยนแปลงมีความเรียบร้อย */
+    transform: scale(1.1); /* ขยายภาพเป็น 110% */
+}
+
+.portfo .pho {
+    width: 100%;
+    max-width: 400px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* จัดตำแหน่งของ logo ที่สมบูรณ์ */  
+    margin: 0 auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.portfo .pho:hover {
+    filter: brightness(170%); /* เพิ่มสีสว่างขึ้นเมื่อมีการโฮเวอร์ */
+    transition: filter 0.3s ease; /* เพิ่ม transition เพื่อทำให้การเปลี่ยนแปลงมีความเรียบร้อย */
+    transform: scale(1.1); /* ขยายภาพเป็น 110% */
+}
+
+.portfo .after {
+    width: 100%;
+    max-width: 400px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* จัดตำแหน่งของ logo ที่สมบูรณ์ */  
+    margin: 0 auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.portfo .after:hover {
+    filter: brightness(170%); /* เพิ่มสีสว่างขึ้นเมื่อมีการโฮเวอร์ */
+    transition: filter 0.3s ease; /* เพิ่ม transition เพื่อทำให้การเปลี่ยนแปลงมีความเรียบร้อย */
+    transform: scale(1.1); /* ขยายภาพเป็น 110% */
+}
+
+.portfo .blen {
+    width: 100%;
+    max-width: 400px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* จัดตำแหน่งของ logo ที่สมบูรณ์ */  
+    margin: 0 auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.portfo .blen:hover {
+    filter: brightness(130%); /* เพิ่มสีสว่างขึ้นเมื่อมีการโฮเวอร์ */
+    transition: filter 0.3s ease; /* เพิ่ม transition เพื่อทำให้การเปลี่ยนแปลงมีความเรียบร้อย */
+    transform: scale(1.1); /* ขยายภาพเป็น 110% */
+}
+
+.portfo .illi {
+    width: 100%;
+    max-width: 400px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* จัดตำแหน่งของ logo ที่สมบูรณ์ */  
+    margin: 0 auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.portfo .illi:hover {
+    filter: brightness(170%); /* เพิ่มสีสว่างขึ้นเมื่อมีการโฮเวอร์ */
+    transition: filter 0.3s ease; /* เพิ่ม transition เพื่อทำให้การเปลี่ยนแปลงมีความเรียบร้อย */
+    transform: scale(1.1); /* ขยายภาพเป็น 110% */
+}
+
+.adopre{
+    
+    background-image: url(https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1517&q=80);
+    background-size: cover;
+    background-position: center;
+    margin-top: 300px;
+    padding: 20px;
+    opacity: 2;
+    min-height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.5); /* ทำให้พื้นหลังของ adopre โปร่งใส */
+    
+
+}
+
+.adopre .ubu{
+    
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* จัดตำแหน่งของ logo ที่สมบูรณ์ */  
+    margin-top: 50px;
+}
+
+.adopre .remixx{
+    
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* จัดตำแหน่งของ logo ที่สมบูรณ์ */  
+}
+
+.adopre .hide{
+    
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* จัดตำแหน่งของ logo ที่สมบูรณ์ */  
+}
+
+.adopre iframe {
+    margin: 20px; /* ปรับค่าให้เหมาะสม */
+}
+
+.preme {
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    position: relative; /* ต้องตั้งค่าตำแหน่งเพื่อให้ ::after ทำงาน */
+}
+
+
+
+
+
+.adopho{
+    
+    background-image: url(https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1517&q=80);
+    background-size: cover;
+    background-position: center;
+    margin-top: 300px;
+    padding: 20px;
+    opacity: 2;
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* ทำให้พื้นหลังของ adopre โปร่งใส */
+}
+
+.adopho .eat {
+    border-radius: 30px;
+    width: 100%;
+    max-width: 400px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* จัดตำแหน่งของ logo ที่สมบูรณ์ */  
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-right: 30px;
+    
+}
+
+.adopho .valo {
+    max-height: 250px;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 380px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* จัดตำแหน่งของ logo ที่สมบูรณ์ */  
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-right: 30px;
+}
+
+.adopho {
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    position: relative; /* ต้องตั้งค่าตำแหน่งเพื่อให้ ::after ทำงาน */
+}
+
+.image-container {
+    position: relative;
+    display: inline-block; /* เพื่อให้ container มีขนาดตามเนื้อหา */
+}
+
+/* ปรับให้ข้อความอยู่ตรงกลางของรูปภาพ */
+.overlay {
+    font-family: "Mitr", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    position: absolute;
+    top: 73%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; /* สีข้อความ */
+    font-size: 1.5rem; /* ขนาดข้อความ */
+    text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+}
+
+/* ให้รูปภาพเต็มพื้นที่ container */
+.image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.image-container1 {
+    position: relative;
+    display: inline-block; /* เพื่อให้ container มีขนาดตามเนื้อหา */
+}
+
+/* ปรับให้ข้อความอยู่ตรงกลางของรูปภาพ */
+.overlay1 {
+    font-family: "Mitr", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    position: absolute;
+    top: 74%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; /* สีข้อความ */
+    font-size: 1.5rem; /* ขนาดข้อความ */
+    text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+}
+
+/* ให้รูปภาพเต็มพื้นที่ container */
+.image-container1 img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.image-container2 {
+    position: relative;
+    display: inline-block; /* เพื่อให้ container มีขนาดตามเนื้อหา */
+}
+
+/* ปรับให้ข้อความอยู่ตรงกลางของรูปภาพ */
+.overlay2 {
+    font-family: "Mitr", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    position: absolute;
+    top: 76%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; /* สีข้อความ */
+    font-size: 1.5rem; /* ขนาดข้อความ */
+    text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+}
+
+/* ให้รูปภาพเต็มพื้นที่ container */
+.image-container2 img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.image-container3 {
+    position: relative;
+    display: inline-block; /* เพื่อให้ container มีขนาดตามเนื้อหา */
+}
+
+/* ปรับให้ข้อความอยู่ตรงกลางของรูปภาพ */
+.overlay3 {
+    font-family: "Mitr", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    position: absolute;
+    top: 78%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    color: white; /* สีข้อความ */
+    font-size: 1.5rem; /* ขนาดข้อความ */
+    text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+}
+
+/* ให้รูปภาพเต็มพื้นที่ container */
+.image-container3 img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.image-container4 {
+    position: relative;
+    display: inline-block; /* เพื่อให้ container มีขนาดตามเนื้อหา */
+}
+
+/* ปรับให้ข้อความอยู่ตรงกลางของรูปภาพ */
+.overlay4 {
+    font-family: "Mitr", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    position: absolute;
+    top: 78%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+    color: white; /* สีข้อความ */
+    font-size: 1.5rem; /* ขนาดข้อความ */
+    text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+}
+
+/* ให้รูปภาพเต็มพื้นที่ container */
+.image-container4 img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.adopre .sameri {
+    max-height: 300px;
+    width: 100%;
+    max-width: 450px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* จัดตำแหน่งของ logo ที่สมบูรณ์ */  
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-left: 70px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.adopre p{
+    max-height: 300px;
+    width: 100%;
+    max-width: 450px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* จัดตำแหน่งของ logo ที่สมบูรณ์ */  
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-left: 70px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+
+.adopre .sameri:hover {
+    transform: scale(1.1); /* ขยายภาพเป็น 110% */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* เพิ่มเงาให้ภาพเพื่อความเด่นชัด */
+}
+
+.adoaff{
+    background-image: url(https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1517&q=80);
+    background-size: cover;
+    background-position: center;
+    margin-top: 300px;
+    padding: 20px;
+    opacity: 2;
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* ทำให้พื้นหลังของ adopre โปร่งใส */
+
+}
+
+.adoaff {
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    position: relative; /* ต้องตั้งค่าตำแหน่งเพื่อให้ ::after ทำงาน */
+}
+
+
+.ble{
+    background-image: url(https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1517&q=80);
+    background-size: cover;
+    background-position: center;
+    margin-top: 300px;
+    padding: 20px;
+    opacity: 2;
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* ทำให้พื้นหลังของ adopre โปร่งใส */
+
+}
+.ble {
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    position: relative; /* ต้องตั้งค่าตำแหน่งเพื่อให้ ::after ทำงาน */
+}
+
+
+.ble .bb {
+    border-radius: 30px;
+    width: 100%;
+    max-width: 400px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* จัดตำแหน่งของ logo ที่สมบูรณ์ */  
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-right: 30px;
+}
+
+.ill{
+    background-image: url(https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1517&q=80);
+    background-size: cover;
+    background-position: center;
+    margin-top: 300px;
+    padding: 20px;
+    opacity: 2;
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* ทำให้พื้นหลังของ adopre โปร่งใส */
+
+}
+
+.ill {
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    position: relative; /* ต้องตั้งค่าตำแหน่งเพื่อให้ ::after ทำงาน */
+}
+
+.ill .ilii {
+    border-radius: 30px;
+    width: 100%;
+    max-width: 400px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* จัดตำแหน่งของ logo ที่สมบูรณ์ */  
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-right: 30px;
+}
+
+
+@media (max-width: 992px){
+    .navbar .links{
+        display: none;
+    }
+
+    .navbar .toggle_btn{
+        display: block;
+    }
+
+    .dropdown_menu{
+        display: block;
+    }
+    
+}
+
+@media (max-width: 576px){
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+    }
+}
+
+@media (max-width: 768px) {
+    .adopre iframe, .adoaff video {
+        width: 100%;
+        height: auto;
+    }
+
+    .adopho .eat, .adopho .valo, .adopre .sameri {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        
+    }
+
+    .portfo img {
+        width: 80%;
+        max-width: 300px;
+        height: auto;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
