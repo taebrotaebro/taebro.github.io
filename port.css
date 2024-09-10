@@ -343,6 +343,19 @@ section#hero{
     display: inline-block; /* เพื่อให้ container มีขนาดตามเนื้อหา */
 }
 
+.adopho1{
+
+    background-color:0
+    background-size: cover;
+    background-position: center;
+    margin-top: 300px;
+    padding: 20px;
+    opacity: 2;
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* ทำให้พื้นหลังของ adopre โปร่งใส */
+}
+
 /* ปรับให้ข้อความอยู่ตรงกลางของรูปภาพ */
 .overlay {
     font-family: "Mitr", sans-serif;
