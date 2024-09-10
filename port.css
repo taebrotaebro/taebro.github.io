@@ -365,11 +365,12 @@ section#hero{
     color: white;
     position: relative; /* ต้องตั้งค่าตำแหน่งเพื่อให้ ::after ทำงาน */
 }
-.adopho2 .valo {
-    max-height: 250px;
+
+.adopho1 .valo {
+    max-height: 400px;
     border-radius: 30px;
     width: 100%;
-    max-width: 380px;
+    max-width: 250px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
