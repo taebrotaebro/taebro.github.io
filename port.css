@@ -365,6 +365,19 @@ section#hero{
     color: white;
     position: relative; /* ต้องตั้งค่าตำแหน่งเพื่อให้ ::after ทำงาน */
 }
+.adopho1 .valo {
+    max-height: 250px;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 380px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* จัดตำแหน่งของ logo ที่สมบูรณ์ */  
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-right: 30px;
+}
 
 /* ปรับให้ข้อความอยู่ตรงกลางของรูปภาพ */
 .overlay {
