@@ -367,9 +367,7 @@ section#hero{
 }
 
 .adopho1 .valo {
-    border-radius: 30px;
-    width: 100%;
-    max-width: 380px;
+
     flex-direction: column;
     align-items: center;
     justify-content: center;
