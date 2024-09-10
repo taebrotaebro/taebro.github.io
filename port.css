@@ -365,7 +365,7 @@ section#hero{
     color: white;
     position: relative; /* ต้องตั้งค่าตำแหน่งเพื่อให้ ::after ทำงาน */
 }
-.adopho1 .valo {
+.adopho2 .valo {
     max-height: 250px;
     border-radius: 30px;
     width: 100%;
