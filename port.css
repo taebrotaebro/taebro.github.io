@@ -343,7 +343,9 @@ section#hero{
     display: inline-block; /* เพื่อให้ container มีขนาดตามเนื้อหา */
 }
 
-
+.adopho iframe {
+    margin: 20px; /* ปรับค่าให้เหมาะสม */
+}
 
 
 
