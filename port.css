@@ -502,6 +502,20 @@ section#hero{
     transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
+.adopho p{
+    max-height: 300px;
+    width: 100%;
+    max-width: 450px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* จัดตำแหน่งของ logo ที่สมบูรณ์ */  
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-left: 70px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
 
 .adopre .sameri:hover {
     transform: scale(1.1); /* ขยายภาพเป็น 110% */
